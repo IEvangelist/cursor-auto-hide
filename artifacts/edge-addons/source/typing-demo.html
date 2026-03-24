@@ -6,80 +6,59 @@
     <title>Cursor Auto Hide - Edge store screenshot 2</title>
     <link rel="stylesheet" href="store.css">
   </head>
-  <body>
-    <main class="store-shot">
-      <section class="shell">
-        <div class="layout">
-          <section class="panel">
-            <p class="eyebrow">Simple demo page</p>
-            <h1>Works where you already type.</h1>
-            <p class="lede">
-              Use it in search boxes, textareas, and contenteditable editors without changing your workflow.
-            </p>
+  <body class="store-body">
+    <main class="store-canvas store-canvas--demo">
+      <section class="browser-shot" aria-label="Browser demo">
+        <div class="browser-shot__bar">
+          <div class="browser-shot__dots" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="browser-shot__url">notes.example / editor</div>
+          <div class="browser-shot__state">Typing active</div>
+        </div>
 
-            <div class="badges" aria-label="Supported fields">
-              <span class="badge">input</span>
-              <span class="badge">textarea</span>
-              <span class="badge">contenteditable</span>
+        <div class="browser-shot__page">
+          <header class="page-header">
+            <div>
+              <p class="eyebrow">Editable controls</p>
+              <h2>Works in the places you already type.</h2>
             </div>
-
-            <ul class="feature-list">
-              <li>
-                <strong>Consistent behavior</strong>
-                <span>The same pointer-hide behavior applies across common editable controls.</span>
-              </li>
-              <li>
-                <strong>Minimal and predictable</strong>
-                <span>No new workflow to learn. Just click into a field and start typing.</span>
-              </li>
-            </ul>
-          </section>
-
-          <section class="browser" aria-label="Demo browser window">
-            <div class="browser__bar">
-              <div class="browser__dots" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="window__url">demo.local / typing-playground</div>
+            <div class="chip-row" aria-label="Supported fields">
+              <span class="chip">input</span>
+              <span class="chip">textarea</span>
+              <span class="chip">contenteditable</span>
             </div>
+          </header>
 
-            <div class="browser__body">
-              <div class="callout">
-                <div>
-                  <strong>Type with less pointer noise</strong>
-                  <span>Cursor Auto Hide keeps the mouse pointer out of the way while you focus on text entry.</span>
-                </div>
-                <div class="cursor-pill">Typing active</div>
-              </div>
+          <div class="page-grid">
+            <label class="field">
+              <span class="field__label">Search</span>
+              <input class="field__control" type="text" value="Find the relevant pull request" readonly>
+            </label>
 
-              <div class="demo-grid">
-                <label class="field">
-                  <span class="field__label">Search</span>
-                  <input class="field__control" type="text" value="Find the relevant pull request" readonly>
-                </label>
+            <label class="field">
+              <span class="field__label">Quick note</span>
+              <input class="field__control" type="text" value="Follow up after the next build passes" readonly>
+            </label>
 
-                <label class="field">
-                  <span class="field__label">Quick note</span>
-                  <input class="field__control" type="text" value="Follow up after the next build passes" readonly>
-                </label>
+            <label class="field field--wide">
+              <span class="field__label">Textarea</span>
+              <textarea class="field__control field__control--large" readonly>Cursor Auto Hide keeps text entry visually clean by hiding the mouse pointer while you type and restoring it as soon as pointer activity resumes.</textarea>
+            </label>
 
-                <label class="field field--wide">
-                  <span class="field__label">Textarea</span>
-                  <textarea class="field__control field__control--large" readonly>Cursor Auto Hide keeps text entry visually clean by hiding the mouse pointer while typing and restoring it as soon as pointer activity resumes.</textarea>
-                </label>
-
-                <div class="field field--wide">
-                  <span class="field__label">Contenteditable editor</span>
-                  <div class="field__editor" contenteditable="true" spellcheck="false">
-                    Drafting notes in a contenteditable region feels calmer when the pointer gets out of the way and returns exactly when needed.
-                  </div>
-                  <span class="field__hint">Use the extension without changing the sites you already work in.</span>
-                </div>
+            <div class="field field--wide">
+              <span class="field__label">Contenteditable editor</span>
+              <div class="field__editor" contenteditable="true" spellcheck="false">
+                Drafting notes in a contenteditable region feels calmer when the pointer gets out of the way and returns exactly when needed.
               </div>
             </div>
-          </section>
+          </div>
+
+          <footer class="page-footer">
+            <span class="mini-note">Returns on movement, click, scroll, blur, tab switch, or short idle.</span>
+          </footer>
         </div>
       </section>
     </main>

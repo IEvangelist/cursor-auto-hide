@@ -50,14 +50,13 @@
   "assets": {
     "store_logo": "artifacts/edge-addons/logo-300.png",
     "screenshots": [
-      "artifacts/edge-addons/screenshot-01-popup-overview.png",
-      "artifacts/edge-addons/screenshot-02-typing-demo.png",
-      "artifacts/edge-addons/screenshot-03-restore-behavior.png"
+      "artifacts/edge-addons/screenshot-01-popup.png",
+      "artifacts/edge-addons/screenshot-02-editable-controls.png"
     ],
     "sources": [
       "artifacts/edge-addons/source/popup-overview.html",
       "artifacts/edge-addons/source/typing-demo.html",
-      "artifacts/edge-addons/source/restore-behavior.html"
+      "artifacts/edge-addons/source/logo-300.html"
     ]
   }
 }

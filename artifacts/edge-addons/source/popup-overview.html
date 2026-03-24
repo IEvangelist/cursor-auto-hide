@@ -6,46 +6,30 @@
     <title>Cursor Auto Hide - Edge store screenshot 1</title>
     <link rel="stylesheet" href="store.css">
   </head>
-  <body>
-    <main class="store-shot">
-      <section class="shell">
-        <div class="layout">
-          <section class="panel">
+  <body class="store-body">
+    <main class="store-canvas store-canvas--popup">
+      <section class="store-copy">
+        <div class="store-brand">
+          <img class="store-brand__mark" src="../../../docs/assets/brand.svg" alt="">
+          <div class="store-brand__text">
             <p class="eyebrow">Cursor Auto Hide</p>
-            <h1>One toggle. Cleaner typing.</h1>
-            <p class="lede">
-              Hide the mouse pointer while you type in editable controls, then restore it the moment pointer activity resumes.
-            </p>
-
-            <ul class="feature-list">
-              <li>
-                <strong>Simple global control</strong>
-                <span>Turn the behavior on or off for all supported sites from one popup toggle.</span>
-              </li>
-              <li>
-                <strong>Native-feeling text entry</strong>
-                <span>Reduces visual pointer clutter while you are actively typing.</span>
-              </li>
-              <li>
-                <strong>Built for the web you already use</strong>
-                <span>Works in common editable surfaces without accounts, setup flows, or extra services.</span>
-              </li>
-            </ul>
-
-            <div class="badges" aria-label="Highlights">
-              <span class="badge">Edge extension</span>
-              <span class="badge">No data collection</span>
-              <span class="badge">Tiny utility</span>
-            </div>
-          </section>
-
-          <section class="surface">
-            <div class="popup-shell">
-              <iframe class="popup-frame" src="../../../popup.html" title="Cursor Auto Hide popup preview"></iframe>
-              <div class="popup-note">Previewing the real popup UI</div>
-            </div>
-          </section>
+            <h1>Simple popup.<br>Cleaner typing.</h1>
+          </div>
         </div>
+
+        <p class="lede">
+          Turn the extension on once and keep the mouse pointer out of the way while you type in editable controls.
+        </p>
+
+        <div class="chip-row" aria-label="Highlights">
+          <span class="chip">Edge add-on</span>
+          <span class="chip">No data collection</span>
+          <span class="chip">One global toggle</span>
+        </div>
+      </section>
+
+      <section class="popup-stage" aria-label="Popup preview">
+        <img class="popup-preview" src="../popup-preview.png" alt="Cursor Auto Hide popup preview">
       </section>
     </main>
   </body>
