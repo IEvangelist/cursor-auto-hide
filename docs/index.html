@@ -13,105 +13,75 @@
   </head>
   <body>
     <main class="site-shell">
-      <section class="hero">
-        <div class="hero__copy">
-          <span class="eyebrow">Cursor Auto Hide</span>
-          <h1>Keep the pointer out of the way while you type.</h1>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__brand-wrap">
+          <object class="hero__brand" data="assets/brand.svg" type="image/svg+xml" tabindex="-1"></object>
+        </div>
+
+        <div class="hero__content">
+          <p class="eyebrow">Chrome + Edge extension</p>
+          <h1 id="hero-title">Hide the pointer while you type.</h1>
           <p class="hero__lede">
-            A lightweight Chrome and Edge extension that makes text editing feel cleaner by hiding the mouse
-            pointer while you are actively typing in editable fields.
+            Cursor Auto Hide hides the mouse pointer while you type in editable fields, then brings it back the
+            moment pointer activity resumes.
+          </p>
+
+          <p class="status-note" role="status">
+            Store listings are in progress. Use local install for now.
           </p>
 
           <div class="hero__actions">
-            <a class="button button--primary" href="https://github.com/IEvangelist/cursor-auto-hide">View source</a>
-            <a class="button button--secondary" href="#install">Install locally</a>
+            <a class="button button--primary" href="#install">Install locally</a>
+            <a class="button button--secondary" href="https://github.com/IEvangelist/cursor-auto-hide">View source</a>
           </div>
 
-          <div class="hero__pills">
-            <span class="pill pill--status">Store listing in progress</span>
-            <span class="pill">Chrome</span>
-            <span class="pill">Edge</span>
-            <span class="pill pill--mono">input + textarea + contenteditable</span>
-          </div>
-        </div>
-
-        <div class="hero__visual">
-          <object class="hero__brand" data="assets/brand.svg" type="image/svg+xml" tabindex="-1"></object>
-
-          <section class="preview-card" aria-label="Feature preview">
-            <div class="preview-card__code">
-              <span class="preview-card__prompt">&gt;</span>
-              <span class="preview-card__text">typing...</span>
-              <span class="preview-card__caret" aria-hidden="true"></span>
-            </div>
-            <p>The pointer disappears while you type, then returns as soon as you move the mouse again.</p>
-          </section>
-        </div>
-      </section>
-
-      <section class="grid-section">
-        <article class="feature-card">
-          <h2>Simple behavior</h2>
-          <p>Works with standard text fields and rich-text editors without adding site-specific complexity.</p>
-        </article>
-
-        <article class="feature-card">
-          <h2>One global toggle</h2>
-          <p>Enable or disable it for all sites from the extension popup. No account, no sync service, no clutter.</p>
-        </article>
-
-        <article class="feature-card">
-          <h2>Privacy-first</h2>
-          <p>No tracking, no content collection, and no network calls. The extension only stores whether it is enabled.</p>
-        </article>
-      </section>
-
-      <section id="install" class="content-card">
-        <div>
-          <span class="section-label">Install now</span>
-          <h2>Until the store listing is live, install it locally.</h2>
-        </div>
-
-        <ol class="steps">
-          <li>Open <code>chrome://extensions</code> or <code>edge://extensions</code>.</li>
-          <li>Turn on <strong>Developer mode</strong>.</li>
-          <li>Click <strong>Load unpacked</strong>.</li>
-          <li>Select the <code>cursor-auto-hide</code> folder.</li>
-        </ol>
-      </section>
-
-      <section class="content-card content-card--split">
-        <div>
-          <span class="section-label">Availability</span>
-          <h2>Consumer store pages are not live yet.</h2>
-          <p>
-            This site is the public home for the project until the Chrome Web Store and Microsoft Edge Add-ons
-            submissions are complete.
+          <p class="hero__meta" aria-label="Key features">
+            <span>Works with standard text fields and editors</span>
+            <span>One simple global toggle</span>
+            <span>No tracking or network calls</span>
           </p>
         </div>
-
-        <div class="store-grid" aria-label="Store availability">
-          <article class="store-card">
-            <strong>Chrome Web Store</strong>
-            <span>Coming soon</span>
-          </article>
-          <article class="store-card">
-            <strong>Microsoft Edge Add-ons</strong>
-            <span>Coming soon</span>
-          </article>
-        </div>
       </section>
 
-      <section class="content-card content-card--split">
+      <section id="install" class="panel panel--split" aria-labelledby="install-title">
         <div>
-          <span class="section-label">Privacy</span>
-          <h2>Small extension, small data surface.</h2>
-          <p>Cursor Auto Hide does not collect browsing activity, typed content, page content, or personal data.</p>
+          <p class="section-label">Install locally</p>
+          <h2 id="install-title">Install in under a minute.</h2>
+
+          <ol class="steps">
+            <li>Open <code>chrome://extensions</code> or <code>edge://extensions</code>.</li>
+            <li>Turn on <strong>Developer mode</strong>.</li>
+            <li>Click <strong>Load unpacked</strong>.</li>
+            <li>Select the <code>cursor-auto-hide</code> folder.</li>
+          </ol>
         </div>
 
-        <div class="link-list">
-          <a href="https://github.com/IEvangelist/cursor-auto-hide/blob/main/PRIVACY.md">Read the privacy note</a>
-          <a href="https://github.com/IEvangelist/cursor-auto-hide">Open the GitHub repo</a>
+        <aside class="callout" aria-labelledby="callout-title">
+          <p class="section-label">Quick tip</p>
+          <h3 id="callout-title">Search for this name</h3>
+          <p>If you use the browser extension search box, search for:</p>
+          <p class="search-term">Cursor Auto Hide</p>
+          <p class="callout__note">After loading, use the popup to turn the extension on or off for all sites.</p>
+        </aside>
+      </section>
+
+      <section class="panel details-panel" aria-label="Project details">
+        <div class="details-grid">
+          <article>
+            <p class="section-label">Availability</p>
+            <h2>Store listings coming soon</h2>
+            <p>
+              The Chrome Web Store and Microsoft Edge Add-ons pages are not live yet. Until then, this site and the
+              GitHub repository are the public home for the project.
+            </p>
+          </article>
+
+          <article>
+            <p class="section-label">Privacy</p>
+            <h2>No browsing data collection</h2>
+            <p>The extension stores one setting: whether it is enabled. It does not collect browsing activity, typed content, or page content.</p>
+            <p><a class="text-link" href="https://github.com/IEvangelist/cursor-auto-hide/blob/main/PRIVACY.md">Read the privacy note</a></p>
+          </article>
         </div>
       </section>
     </main>
