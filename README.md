@@ -67,6 +67,8 @@ Upload the zip from `dist\` to:
 - Chrome Web Store
 - Microsoft Edge Add-ons
 
+Prepared Microsoft Edge Add-ons submission assets live in `artifacts\edge-addons\`, including the draft listing JSON, 300x300 store logo, store screenshots, and the HTML source used to capture those screenshots.
+
 ## Privacy
 
 This extension does not collect browsing history, keystrokes, page content, or personal data. It only stores one synced setting: whether the extension is enabled.

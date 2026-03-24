@@ -1,3 +1,4 @@
+import argparse
 import math
 import struct
 import zlib
@@ -169,11 +170,36 @@ def write_png(path: Path, size: int):
     path.write_bytes(png)
 
 
-def main():
-    ICONS_DIR.mkdir(parents=True, exist_ok=True)
+def parse_args():
+    parser = argparse.ArgumentParser(description="Generate Cursor Auto Hide PNG brand assets.")
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=ICONS_DIR,
+        help="Directory where generated PNG files should be written.",
+    )
+    parser.add_argument(
+        "--sizes",
+        nargs="+",
+        type=int,
+        default=list(SIZES),
+        help="One or more square PNG sizes to generate.",
+    )
+    parser.add_argument(
+        "--prefix",
+        default="icon",
+        help="Filename prefix to use for generated images. Each file becomes <prefix><size>.png.",
+    )
+    return parser.parse_args()
 
-    for size in SIZES:
-        write_png(ICONS_DIR / f"icon{size}.png", size)
+
+def main():
+    args = parse_args()
+    output_dir = args.output_dir.resolve()
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    for size in args.sizes:
+        write_png(output_dir / f"{args.prefix}{size}.png", size)
 
 
 if __name__ == "__main__":

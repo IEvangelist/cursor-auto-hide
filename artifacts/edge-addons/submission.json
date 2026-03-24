@@ -1,0 +1,63 @@
+{
+  "store": "Microsoft Edge Add-ons",
+  "listing": {
+    "name": "Cursor Auto Hide",
+    "summary": "Hide the mouse pointer while typing in editable controls and restore it as soon as the pointer moves.",
+    "category": "Developer tools",
+    "visibility": "Public and searchable",
+    "markets": "All available markets",
+    "support_email": "david.pine.7@gmail.com",
+    "website_url": "https://ievangelist.github.io/cursor-auto-hide/",
+    "privacy_policy_url": "https://github.com/IEvangelist/cursor-auto-hide/blob/main/PRIVACY.md",
+    "search_terms": [
+      "cursor hide",
+      "mouse pointer",
+      "typing focus",
+      "editable controls",
+      "text entry",
+      "developer tools"
+    ],
+    "short_description": "A tiny Edge extension that hides the mouse pointer while you type, then restores it the moment you move the pointer.",
+    "full_description": "Cursor Auto Hide keeps text entry clean by hiding the mouse pointer while you type in editable controls.\n\nIt works in common editing surfaces like input fields, textareas, and contenteditable editors.\n\nThe pointer returns immediately on movement, click, scroll, blur, tab switch, or after a short idle timeout.\n\nUse the popup to turn the behavior on or off for all sites. The extension does not collect browsing history, keystrokes, page content, or personal data. It only stores one synced setting for whether the extension is enabled."
+  },
+  "reviewer_notes": {
+    "single_purpose": "Hide the mouse pointer while the user is actively typing in editable controls, then restore normal pointer behavior as soon as pointer activity resumes.",
+    "data_collection": "No user data is collected. The extension stores one synced boolean setting named 'enabled' using chrome.storage.sync.",
+    "permissions": [
+      {
+        "name": "storage",
+        "reason": "Persists the single global enabled or disabled setting across the user's signed-in browsers."
+      },
+      {
+        "name": "<all_urls> content script match",
+        "reason": "The content script must run on pages with editable controls so the extension can hide and restore the pointer consistently across sites."
+      }
+    ],
+    "technical_notes": [
+      "Manifest Version 3 extension.",
+      "No remote code or remotely loaded scripts.",
+      "Browser internal pages such as edge:// are excluded by the browser and are not modified by the extension."
+    ],
+    "test_steps": [
+      "Install the extension package in Microsoft Edge.",
+      "Open any website with an input, textarea, or contenteditable field.",
+      "Click into the editable field and type with the mouse pointer resting over the page.",
+      "Verify that the mouse pointer is hidden while typing.",
+      "Move the mouse, click, scroll, switch tabs, or wait briefly without typing and verify that the pointer returns.",
+      "Open the extension popup and toggle the extension off, then verify that pages keep their normal pointer behavior."
+    ]
+  },
+  "assets": {
+    "store_logo": "artifacts/edge-addons/logo-300.png",
+    "screenshots": [
+      "artifacts/edge-addons/screenshot-01-popup-overview.png",
+      "artifacts/edge-addons/screenshot-02-typing-demo.png",
+      "artifacts/edge-addons/screenshot-03-restore-behavior.png"
+    ],
+    "sources": [
+      "artifacts/edge-addons/source/popup-overview.html",
+      "artifacts/edge-addons/source/typing-demo.html",
+      "artifacts/edge-addons/source/restore-behavior.html"
+    ]
+  }
+}
