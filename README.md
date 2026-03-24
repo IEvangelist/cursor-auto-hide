@@ -18,10 +18,12 @@ Pushes to `main` rebuild the Pages site and refresh the downloadable ZIP automat
 
 1. Download `https://ievangelist.github.io/cursor-auto-hide/downloads/cursor-auto-hide-latest.zip`.
 2. Extract the ZIP.
-3. Open `chrome://extensions` or `edge://extensions`.
+3. Open `chrome://extensions` or `edge://extensions` manually in the browser address bar.
 4. Turn on **Developer mode**.
 5. Click **Load unpacked**.
 6. Select the extracted `cursor-auto-hide-*` folder.
+
+Browsers block websites from directly opening `chrome://` and `edge://` pages, so the landing page should copy those addresses rather than trying to navigate to them.
 
 Use the extension popup to turn the behavior on or off for all sites.
 

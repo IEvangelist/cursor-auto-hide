@@ -16,6 +16,7 @@
     >
     <link rel="icon" href="assets/brand.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <script src="site.js" defer></script>
   </head>
   <body>
     <main class="site-shell">
@@ -24,18 +25,18 @@
           <p class="eyebrow">Cursor Auto Hide</p>
           <h1 id="hero-title">Hide the pointer while you type.</h1>
           <p class="hero__lede">
-            A cleaner typing experience for Chrome and Edge.
+            A tiny pointer-hiding extension for Chrome and Edge.
           </p>
 
           <div class="hero__actions">
             <a class="button button--primary" href="downloads/cursor-auto-hide-latest.zip" download>Download ZIP</a>
-            <a class="button button--secondary" href="#install">Install steps</a>
+            <a class="button button--secondary" href="#install">How to install</a>
           </div>
 
           <p class="hero__meta" aria-label="Extension summary">
             <span>Chrome</span>
             <span>Edge</span>
-            <span>Direct download live</span>
+            <span>No clone required</span>
           </p>
         </div>
 
@@ -49,27 +50,31 @@
       <section id="install" class="install" aria-labelledby="install-title">
         <div class="install__header">
           <p class="section-label">Install</p>
-          <h2 id="install-title">Download and load it</h2>
-          <p class="install__note">Until the browser stores are live, download the packaged ZIP and load it unpacked.</p>
+          <h2 id="install-title">Install from ZIP</h2>
+          <p class="install__note">Stores soon. The ZIP install works today.</p>
         </div>
 
         <ol class="steps">
           <li>
-            Download
+            Download and extract
             <a class="protocol-link" href="downloads/cursor-auto-hide-latest.zip" download><code>cursor-auto-hide-latest.zip</code></a>.
           </li>
           <li>
-            Extract the ZIP somewhere easy to find.
-          </li>
-          <li>
-            Open
-            <a class="protocol-link" href="chrome://extensions"><code>chrome://extensions</code></a>
-            or
-            <a class="protocol-link" href="edge://extensions"><code>edge://extensions</code></a>.
+            Open the extensions page. Browsers block direct links to internal settings pages, so copy one and paste it
+            into the address bar:
+            <span class="protocol-actions" role="group" aria-label="Copy extensions page address">
+              <button class="protocol-button" type="button" data-copy-url="chrome://extensions" aria-label="Copy chrome://extensions">
+                <code>chrome://extensions</code>
+                <span class="protocol-button__status" data-copy-status>Copy</span>
+              </button>
+              <button class="protocol-button" type="button" data-copy-url="edge://extensions" aria-label="Copy edge://extensions">
+                <code>edge://extensions</code>
+                <span class="protocol-button__status" data-copy-status>Copy</span>
+              </button>
+            </span>
           </li>
           <li>Turn on <strong>Developer mode</strong>.</li>
-          <li>Click <strong>Load unpacked</strong>.</li>
-          <li>Select the extracted <code>cursor-auto-hide-*</code> folder.</li>
+          <li>Click <strong>Load unpacked</strong> and choose the extracted <code>cursor-auto-hide-*</code> folder.</li>
         </ol>
 
         <p class="install__hint">
@@ -89,13 +94,7 @@
         </a>
         <a class="footer-link" href="https://github.com/IEvangelist/cursor-auto-hide/blob/main/PRIVACY.md">Privacy</a>
         <a class="footer-link footer-link--with-icon" href="https://github.com/IEvangelist/cursor-auto-hide/blob/main/LICENSE" aria-label="MIT license">
-          <svg class="footer-icon footer-icon--stroke" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3v14" />
-            <path d="M7 21h10" />
-            <path d="M5 7h14" />
-            <path d="M8 7 5.5 11.5a2.5 2.5 0 0 0 5 0L8 7Z" />
-            <path d="M16 7 13.5 11.5a2.5 2.5 0 0 0 5 0L16 7Z" />
-          </svg>
+          <span class="footer-emoji" aria-hidden="true">⚖</span>
           <span>MIT</span>
         </a>
       </div>
