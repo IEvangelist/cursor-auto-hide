@@ -1,3 +1,12 @@
 dist/
 *.zip
 Thumbs.db
+
+# Never commit signing keys or private key material.
+*.pem
+*.key
+*.p12
+*.pfx
+*.pvk
+*.snk
+*private-key*

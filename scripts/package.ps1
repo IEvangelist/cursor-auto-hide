@@ -1,5 +1,9 @@
 param()
 
+$ErrorActionPreference = 'Stop'
+
+. (Join-Path $PSScriptRoot 'assert-safe-files.ps1')
+
 $projectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $manifestPath = Join-Path $projectRoot 'manifest.json'
 $manifest = Get-Content -Raw -Path $manifestPath | ConvertFrom-Json
@@ -16,6 +20,8 @@ if (Test-Path $stagePath) {
 if (Test-Path $zipPath) {
     Remove-Item -Path $zipPath -Force
 }
+
+Assert-NoSensitiveProjectFiles -RootPath $projectRoot -Operation 'package the extension'
 
 New-Item -ItemType Directory -Path $stagePath -Force | Out-Null
 
@@ -41,6 +47,8 @@ foreach ($relativePath in $pathsToPackage) {
     New-Item -ItemType Directory -Path (Split-Path -Path $destinationPath -Parent) -Force | Out-Null
     Copy-Item -Path $sourcePath -Destination $destinationPath -Force
 }
+
+Assert-NoSensitiveProjectFiles -RootPath $stagePath -Operation 'create the extension archive'
 
 Compress-Archive -Path (Join-Path $stagePath '*') -DestinationPath $zipPath -Force
 

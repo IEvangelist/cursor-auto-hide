@@ -25,6 +25,8 @@ Pushes to `main` rebuild the Pages site and refresh the downloadable ZIP automat
 
 Browsers block websites from directly opening `chrome://` and `edge://` pages, so the landing page should copy those addresses rather than trying to navigate to them.
 
+If Chrome or Edge warns that the extension includes a `.pem` or private key file, you picked the wrong folder. Go back and select only the extracted `cursor-auto-hide-*` folder, not a parent directory that also contains signing material.
+
 Use the extension popup to turn the behavior on or off for all sites.
 
 ## What it works with
@@ -55,6 +57,8 @@ From `E:\GitHub\cursor-auto-hide`:
 ```
 
 That creates a zip in `dist\` for store uploads.
+
+The packaging and validation scripts now fail fast if the project folder contains `.pem`, `.key`, `.p12`, `.pfx`, `.pvk`, `.snk`, or similarly named private key files.
 
 ## Publish
 
