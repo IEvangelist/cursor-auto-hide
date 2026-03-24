@@ -28,13 +28,14 @@
           </p>
 
           <div class="hero__actions">
-            <a class="button button--primary" href="#install">Install locally</a>
+            <a class="button button--primary" href="downloads/cursor-auto-hide-latest.zip" download>Download ZIP</a>
+            <a class="button button--secondary" href="#install">Install steps</a>
           </div>
 
           <p class="hero__meta" aria-label="Extension summary">
             <span>Chrome</span>
             <span>Edge</span>
-            <span>Store listing soon</span>
+            <span>Direct download live</span>
           </p>
         </div>
 
@@ -48,10 +49,18 @@
       <section id="install" class="install" aria-labelledby="install-title">
         <div class="install__header">
           <p class="section-label">Install</p>
-          <h2 id="install-title">Load it locally</h2>
+          <h2 id="install-title">Download and load it</h2>
+          <p class="install__note">Until the browser stores are live, download the packaged ZIP and load it unpacked.</p>
         </div>
 
         <ol class="steps">
+          <li>
+            Download
+            <a class="protocol-link" href="downloads/cursor-auto-hide-latest.zip" download><code>cursor-auto-hide-latest.zip</code></a>.
+          </li>
+          <li>
+            Extract the ZIP somewhere easy to find.
+          </li>
           <li>
             Open
             <a class="protocol-link" href="chrome://extensions"><code>chrome://extensions</code></a>
@@ -60,7 +69,7 @@
           </li>
           <li>Turn on <strong>Developer mode</strong>.</li>
           <li>Click <strong>Load unpacked</strong>.</li>
-          <li>Select the <code>cursor-auto-hide</code> folder.</li>
+          <li>Select the extracted <code>cursor-auto-hide-*</code> folder.</li>
         </ol>
 
         <p class="install__hint">
@@ -79,7 +88,7 @@
           </svg>
         </a>
         <a class="footer-link" href="https://github.com/IEvangelist/cursor-auto-hide/blob/main/PRIVACY.md">Privacy</a>
-        <a class="footer-icon-link" href="https://github.com/IEvangelist/cursor-auto-hide/blob/main/LICENSE" aria-label="MIT license">
+        <a class="footer-link footer-link--with-icon" href="https://github.com/IEvangelist/cursor-auto-hide/blob/main/LICENSE" aria-label="MIT license">
           <svg class="footer-icon footer-icon--stroke" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 3v14" />
             <path d="M7 21h10" />
@@ -87,6 +96,7 @@
             <path d="M8 7 5.5 11.5a2.5 2.5 0 0 0 5 0L8 7Z" />
             <path d="M16 7 13.5 11.5a2.5 2.5 0 0 0 5 0L16 7Z" />
           </svg>
+          <span>MIT</span>
         </a>
       </div>
 

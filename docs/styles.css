@@ -160,6 +160,7 @@ h2 {
 
 .hero__lede,
 .steps,
+.install__note,
 .install__hint,
 .site-footer {
   margin: 0;
@@ -242,6 +243,10 @@ h2 {
 .install__header {
   display: grid;
   gap: 8px;
+}
+
+.install__note {
+  max-width: 42ch;
 }
 
 .steps {
@@ -336,6 +341,7 @@ code {
 .site-footer__links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 14px;
 }
 
@@ -362,6 +368,12 @@ code {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--border);
+}
+
+.footer-link--with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer-icon {

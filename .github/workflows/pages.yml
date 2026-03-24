@@ -7,6 +7,13 @@ on:
       - main
     paths:
       - docs/**
+      - manifest.json
+      - content.js
+      - popup.html
+      - popup.css
+      - popup.js
+      - icons/**
+      - scripts/package.ps1
       - .github/workflows/pages.yml
 
 permissions:
@@ -29,13 +36,43 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Build downloadable site
+        shell: pwsh
+        run: |
+          ./scripts/package.ps1
+
+          $sitePath = Join-Path $PWD 'site'
+          $docsPath = Join-Path $PWD 'docs'
+          $downloadsPath = Join-Path $sitePath 'downloads'
+          $distPath = Join-Path $PWD 'dist'
+
+          if (Test-Path $sitePath) {
+              Remove-Item -Path $sitePath -Recurse -Force
+          }
+
+          New-Item -ItemType Directory -Path $sitePath | Out-Null
+          Copy-Item -Path (Join-Path $docsPath '*') -Destination $sitePath -Recurse -Force
+
+          New-Item -ItemType Directory -Path $downloadsPath | Out-Null
+
+          $zip = Get-ChildItem -Path $distPath -Filter 'cursor-auto-hide-*.zip' |
+              Sort-Object LastWriteTimeUtc -Descending |
+              Select-Object -First 1
+
+          if ($null -eq $zip) {
+              throw 'No extension package was created.'
+          }
+
+          Copy-Item -Path $zip.FullName -Destination (Join-Path $downloadsPath $zip.Name) -Force
+          Copy-Item -Path $zip.FullName -Destination (Join-Path $downloadsPath 'cursor-auto-hide-latest.zip') -Force
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs
+          path: ./site
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -4,22 +4,24 @@
 
 ## Public landing page
 
-Once GitHub Pages finishes deploying, the public landing page will be:
+The public landing page is:
 
 `https://ievangelist.github.io/cursor-auto-hide/`
 
-To enable the first deployment, open:
+Direct download for the current package is published with the site at:
 
-`https://github.com/IEvangelist/cursor-auto-hide/settings/pages`
+`https://ievangelist.github.io/cursor-auto-hide/downloads/cursor-auto-hide-latest.zip`
 
-Then set the source to **GitHub Actions** once. After that, pushes to `main` will deploy the site automatically.
+Pushes to `main` rebuild the Pages site and refresh the downloadable ZIP automatically.
 
 ## Install locally
 
-1. Open `chrome://extensions` or `edge://extensions`.
-2. Turn on **Developer mode**.
-3. Click **Load unpacked**.
-4. Select `E:\GitHub\cursor-auto-hide`.
+1. Download `https://ievangelist.github.io/cursor-auto-hide/downloads/cursor-auto-hide-latest.zip`.
+2. Extract the ZIP.
+3. Open `chrome://extensions` or `edge://extensions`.
+4. Turn on **Developer mode**.
+5. Click **Load unpacked**.
+6. Select the extracted `cursor-auto-hide-*` folder.
 
 Use the extension popup to turn the behavior on or off for all sites.
 
