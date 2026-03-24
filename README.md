@@ -19,6 +19,16 @@ Use the extension popup to turn the behavior on or off for all sites.
 
 Browser pages like `chrome://` and `edge://` are excluded by the browser.
 
+## Validate locally
+
+From `E:\GitHub\cursor-auto-hide`:
+
+```powershell
+.\scripts\validate.ps1
+```
+
+GitHub Actions runs the same validation on pushes and pull requests.
+
 ## Release
 
 From `E:\GitHub\cursor-auto-hide`:
