@@ -8,82 +8,80 @@
       content="Cursor Auto Hide is a small Chrome and Edge extension that hides the mouse pointer while you type in editable controls."
     >
     <title>Cursor Auto Hide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    >
     <link rel="icon" href="assets/brand.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main class="site-shell">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__brand-wrap">
-          <object class="hero__brand" data="assets/brand.svg" type="image/svg+xml" tabindex="-1"></object>
-        </div>
-
         <div class="hero__content">
-          <p class="eyebrow">Chrome + Edge extension</p>
+          <p class="eyebrow">Cursor Auto Hide</p>
           <h1 id="hero-title">Hide the pointer while you type.</h1>
           <p class="hero__lede">
-            Cursor Auto Hide hides the mouse pointer while you type in editable fields, then brings it back the
-            moment pointer activity resumes.
-          </p>
-
-          <p class="status-note" role="status">
-            Store listings are in progress. Use local install for now.
+            A cleaner typing experience for Chrome and Edge.
           </p>
 
           <div class="hero__actions">
             <a class="button button--primary" href="#install">Install locally</a>
-            <a class="button button--secondary" href="https://github.com/IEvangelist/cursor-auto-hide">View source</a>
           </div>
 
-          <p class="hero__meta" aria-label="Key features">
-            <span>Works with standard text fields and editors</span>
-            <span>One simple global toggle</span>
-            <span>No tracking or network calls</span>
+          <p class="hero__meta" aria-label="Extension summary">
+            <span>Chrome</span>
+            <span>Edge</span>
+            <span>Store listing soon</span>
           </p>
         </div>
+
+        <div class="hero__art">
+          <div class="hero__art-surface">
+            <img class="hero__brand" src="assets/brand.svg" alt="">
+          </div>
+        </div>
       </section>
 
-      <section id="install" class="panel panel--split" aria-labelledby="install-title">
-        <div>
-          <p class="section-label">Install locally</p>
-          <h2 id="install-title">Install in under a minute.</h2>
-
-          <ol class="steps">
-            <li>Open <code>chrome://extensions</code> or <code>edge://extensions</code>.</li>
-            <li>Turn on <strong>Developer mode</strong>.</li>
-            <li>Click <strong>Load unpacked</strong>.</li>
-            <li>Select the <code>cursor-auto-hide</code> folder.</li>
-          </ol>
+      <section id="install" class="install" aria-labelledby="install-title">
+        <div class="install__header">
+          <p class="section-label">Install</p>
+          <h2 id="install-title">Load it locally</h2>
         </div>
 
-        <aside class="callout" aria-labelledby="callout-title">
-          <p class="section-label">Quick tip</p>
-          <h3 id="callout-title">Search for this name</h3>
-          <p>If you use the browser extension search box, search for:</p>
-          <p class="search-term">Cursor Auto Hide</p>
-          <p class="callout__note">After loading, use the popup to turn the extension on or off for all sites.</p>
-        </aside>
-      </section>
+        <ol class="steps">
+          <li>
+            Open
+            <a class="protocol-link" href="chrome://extensions"><code>chrome://extensions</code></a>
+            or
+            <a class="protocol-link" href="edge://extensions"><code>edge://extensions</code></a>.
+          </li>
+          <li>Turn on <strong>Developer mode</strong>.</li>
+          <li>Click <strong>Load unpacked</strong>.</li>
+          <li>Select the <code>cursor-auto-hide</code> folder.</li>
+        </ol>
 
-      <section class="panel details-panel" aria-label="Project details">
-        <div class="details-grid">
-          <article>
-            <p class="section-label">Availability</p>
-            <h2>Store listings coming soon</h2>
-            <p>
-              The Chrome Web Store and Microsoft Edge Add-ons pages are not live yet. Until then, this site and the
-              GitHub repository are the public home for the project.
-            </p>
-          </article>
-
-          <article>
-            <p class="section-label">Privacy</p>
-            <h2>No browsing data collection</h2>
-            <p>The extension stores one setting: whether it is enabled. It does not collect browsing activity, typed content, or page content.</p>
-            <p><a class="text-link" href="https://github.com/IEvangelist/cursor-auto-hide/blob/main/PRIVACY.md">Read the privacy note</a></p>
-          </article>
-        </div>
+        <p class="install__hint">
+          Search for <span class="search-term">Cursor Auto Hide</span> after install.
+        </p>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__links">
+        <a class="footer-link" href="https://github.com/IEvangelist/cursor-auto-hide/blob/main/PRIVACY.md">Privacy</a>
+        <a class="footer-icon-link" href="https://github.com/IEvangelist/cursor-auto-hide" aria-label="GitHub repository">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.53.1.72-.23.72-.51v-1.95c-2.93.64-3.55-1.24-3.55-1.24-.48-1.22-1.18-1.55-1.18-1.55-.96-.66.07-.64.07-.64 1.06.07 1.62 1.09 1.62 1.09.94 1.61 2.46 1.15 3.06.88.1-.68.37-1.15.67-1.41-2.34-.27-4.8-1.17-4.8-5.23 0-1.16.41-2.11 1.09-2.86-.11-.27-.47-1.36.1-2.84 0 0 .89-.29 2.93 1.09a10.1 10.1 0 0 1 5.34 0c2.04-1.38 2.93-1.09 2.93-1.09.57 1.48.21 2.57.1 2.84.68.75 1.09 1.7 1.09 2.86 0 4.07-2.47 4.95-4.83 5.21.38.33.72.97.72 1.96v2.9c0 .28.19.62.73.51A10.5 10.5 0 0 0 12 1.5Z"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <a class="site-footer__author" href="https://davidpine.dev/">© 2026 David Pine 🤓</a>
+    </footer>
   </body>
 </html>
