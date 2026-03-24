@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Auto Hide</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup__header">
+        <img src="icons/icon48.png" alt="" width="32" height="32">
+        <div>
+          <h1>Cursor Auto Hide</h1>
+          <p id="versionText" class="popup__version"></p>
+        </div>
+      </header>
+
+      <label class="toggle" for="enabledToggle">
+        <span class="toggle__copy">
+          <strong>Enabled on all sites</strong>
+          <span id="statusText">Hides the pointer while typing in editable controls.</span>
+        </span>
+        <input id="enabledToggle" type="checkbox">
+      </label>
+
+      <p class="popup__hint">
+        The pointer hides while you type in text-editable fields and reappears as soon as you move the mouse,
+        click, scroll, switch tabs, or leave the field.
+      </p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
