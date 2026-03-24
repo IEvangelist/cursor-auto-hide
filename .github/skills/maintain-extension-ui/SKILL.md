@@ -24,3 +24,8 @@ Use this skill when updating the popup, icons, or the core typing experience.
 - `content.js`
 - `icons\*`
 - `manifest.json`
+
+## Cross-reference
+
+- See `playwright-cli` to preview the popup and landing page and capture screenshots after visual changes.
+- See `release-extension` when the UI work should ship in a new version.

@@ -37,3 +37,8 @@ Use this skill when preparing a new extension version or store upload.
 - The upload zip is created in `dist\`.
 - `dist\` stays out of git.
 - If permissions or privacy behavior change, update `PRIVACY.md` before publishing.
+
+## Cross-reference
+
+- See `playwright-cli` to capture final screenshots or preview consumer-facing pages before release.
+- See `maintain-extension-ui` when the release includes popup or branding changes.

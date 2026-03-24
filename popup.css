@@ -1,72 +1,209 @@
+:root,
+html {
+  background:
+    radial-gradient(circle at top, rgba(37, 99, 235, 0.32), transparent 38%),
+    linear-gradient(180deg, #0f172a 0%, var(--bg) 72%);
+}
+
 :root {
   color-scheme: light dark;
-  font-family: "Segoe UI", system-ui, sans-serif;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+  --bg: #020617;
+  --surface: rgba(15, 23, 42, 0.86);
+  --surface-soft: rgba(15, 23, 42, 0.58);
+  --border: rgba(148, 163, 184, 0.18);
+  --text: #e2e8f0;
+  --muted: #cbd5e1;
+  --subtle: #94a3b8;
+  --accent: #67e8f9;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  min-width: 320px;
-  background: #0f172a;
-  color: #e2e8f0;
+  width: min(392px, 100vw);
+  min-width: 360px;
+  margin-inline: auto;
+  color: var(--text);
 }
 
 .popup {
   display: grid;
-  gap: 16px;
-  padding: 16px;
+  gap: 18px;
+  padding: 18px;
+  width: 100%;
 }
 
-.popup__header {
-  display: flex;
+.popup__hero {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1.2fr 0.9fr;
   align-items: center;
-  gap: 12px;
+  padding: 16px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.72)),
+    var(--surface);
+  box-shadow: 0 18px 48px rgba(2, 6, 23, 0.34);
 }
 
-.popup__header h1 {
+.popup__copy {
+  display: grid;
+  gap: 10px;
+}
+
+.popup__eyebrow,
+.popup__chips span,
+.popup__version {
+  font-family: var(--mono);
+}
+
+.popup__eyebrow {
   margin: 0;
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.popup__hero h1 {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.05;
+}
+
+.popup__lede {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.popup__brand {
+  width: 132px;
+  height: 132px;
+  margin-left: auto;
+  border: 0;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.toggle-card {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.62)),
+    var(--surface-soft);
+}
+
+.toggle-card__copy {
+  display: grid;
+  gap: 6px;
+  max-width: 240px;
+}
+
+.toggle-card__copy strong {
   font-size: 1rem;
 }
 
-.popup__version {
-  margin: 4px 0 0;
-  color: #94a3b8;
-  font-size: 0.875rem;
+.toggle-card__copy span {
+  color: var(--muted);
+  line-height: 1.45;
 }
 
-.toggle {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
+.toggle-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-switch input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.toggle-switch__track {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 58px;
+  height: 34px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(51, 65, 85, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.toggle-switch__thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: #f8fafc;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.26);
+  transition: transform 150ms ease;
+}
+
+.toggle-switch input:checked + .toggle-switch__track {
+  background: linear-gradient(135deg, var(--accent), #38bdf8);
+  border-color: transparent;
+}
+
+.toggle-switch input:checked + .toggle-switch__track .toggle-switch__thumb {
+  transform: translateX(24px);
+}
+
+.toggle-switch input:focus-visible + .toggle-switch__track {
+  outline: 2px solid rgba(103, 232, 249, 0.72);
+  outline-offset: 2px;
+}
+
+.popup__chips {
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  padding: 12px;
-  border-radius: 12px;
-  background: rgba(15, 23, 42, 0.5);
-  border: 1px solid rgba(148, 163, 184, 0.25);
 }
 
-.toggle__copy {
+.popup__chips span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(15, 23, 42, 0.52);
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.popup__footer {
   display: grid;
-  gap: 4px;
-}
-
-.toggle__copy strong {
-  font-size: 0.95rem;
-}
-
-.toggle__copy span {
-  color: #cbd5e1;
-  line-height: 1.4;
-}
-
-.toggle input {
-  width: 18px;
-  height: 18px;
-  margin-top: 3px;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.46);
+  border: 1px solid var(--border);
 }
 
 .popup__hint {
   margin: 0;
-  color: #cbd5e1;
+  color: var(--muted);
   line-height: 1.4;
   font-size: 0.92rem;
+}
+
+.popup__version {
+  margin: 0;
+  color: var(--subtle);
+  font-size: 0.82rem;
 }

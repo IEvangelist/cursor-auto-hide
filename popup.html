@@ -4,30 +4,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursor Auto Hide</title>
+    <link rel="icon" href="docs/assets/brand.svg" type="image/svg+xml">
     <link rel="stylesheet" href="popup.css">
   </head>
   <body>
     <main class="popup">
-      <header class="popup__header">
-        <img src="icons/icon48.png" alt="" width="32" height="32">
-        <div>
-          <h1>Cursor Auto Hide</h1>
-          <p id="versionText" class="popup__version"></p>
+      <section class="popup__hero">
+        <div class="popup__copy">
+          <p class="popup__eyebrow">Cursor Auto Hide</p>
+          <h1>Hide the pointer while you type.</h1>
+          <p class="popup__lede">
+            Clean, native-feeling text entry for Chrome and Edge with one simple global toggle.
+          </p>
         </div>
-      </header>
 
-      <label class="toggle" for="enabledToggle">
-        <span class="toggle__copy">
+        <object class="popup__brand" data="docs/assets/brand.svg" type="image/svg+xml" tabindex="-1"></object>
+      </section>
+
+      <label class="toggle-card" for="enabledToggle">
+        <span class="toggle-card__copy">
           <strong>Enabled on all sites</strong>
           <span id="statusText">Hides the pointer while typing in editable controls.</span>
         </span>
-        <input id="enabledToggle" type="checkbox">
+
+        <span class="toggle-switch">
+          <input id="enabledToggle" type="checkbox">
+          <span class="toggle-switch__track">
+            <span class="toggle-switch__thumb"></span>
+          </span>
+        </span>
       </label>
 
-      <p class="popup__hint">
-        The pointer hides while you type in text-editable fields and reappears as soon as you move the mouse,
-        click, scroll, switch tabs, or leave the field.
-      </p>
+      <div class="popup__chips" aria-label="Supported fields">
+        <span>input</span>
+        <span>textarea</span>
+        <span>contenteditable</span>
+      </div>
+
+      <footer class="popup__footer">
+        <p class="popup__hint">
+          The pointer returns on movement, click, scroll, blur, tab switch, or after a short idle timeout.
+        </p>
+        <p id="versionText" class="popup__version"></p>
+      </footer>
     </main>
 
     <script src="popup.js"></script>

@@ -25,6 +25,7 @@ $pathsToPackage = @(
     'popup.html',
     'popup.css',
     'popup.js',
+    'docs/assets/brand.svg',
     'icons'
 )
 

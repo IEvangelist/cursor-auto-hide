@@ -15,8 +15,9 @@
 ## Icons and UI
 
 - Chrome and Edge manifest icons must remain PNG files.
-- If the icon design changes, keep any SVG source asset in sync with the PNG sizes used by `manifest.json`.
+- If the icon design changes, keep `docs/assets/brand.svg` in sync with the PNG sizes used by `manifest.json`.
 - Keep the popup simple and readable.
+- Use the `playwright-cli` skill when previewing the landing page or popup UI.
 
 ## Validation and release
 

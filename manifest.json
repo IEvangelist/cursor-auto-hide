@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Cursor Auto Hide",
   "description": "Hide the mouse pointer while typing in editable controls and restore it as soon as the pointer moves.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "permissions": [
     "storage"
   ],

@@ -2,6 +2,12 @@
 
 `Cursor Auto Hide` is a small Chrome/Edge extension that hides the **mouse pointer** while you type in text fields, then shows it again as soon as you move the mouse, click, scroll, switch tabs, or stop typing.
 
+## Public landing page
+
+Once GitHub Pages finishes deploying, the public landing page will be:
+
+`https://ievangelist.github.io/cursor-auto-hide/`
+
 ## Install locally
 
 1. Open `chrome://extensions` or `edge://extensions`.
