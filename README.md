@@ -8,6 +8,12 @@ Once GitHub Pages finishes deploying, the public landing page will be:
 
 `https://ievangelist.github.io/cursor-auto-hide/`
 
+To enable the first deployment, open:
+
+`https://github.com/IEvangelist/cursor-auto-hide/settings/pages`
+
+Then set the source to **GitHub Actions** once. After that, pushes to `main` will deploy the site automatically.
+
 ## Install locally
 
 1. Open `chrome://extensions` or `edge://extensions`.
