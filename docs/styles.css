@@ -364,10 +364,21 @@ code {
   border: 1px solid var(--border);
 }
 
-.footer-icon-link svg {
+.footer-icon {
   width: 18px;
   height: 18px;
+}
+
+.footer-icon--filled {
   fill: currentColor;
+}
+
+.footer-icon--stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 @media (max-width: 760px) {
